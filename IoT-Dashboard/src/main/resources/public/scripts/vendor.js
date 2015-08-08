@@ -27159,6 +27159,7 @@ function ngViewFillContentFactory($compile, $controller, $route) {
     var setBindData = !defineProperty ? noop : function(func, value) {
       descriptor.value = value;
       defineProperty(func, '__bindData__', descriptor);
+      descriptor.value = null;
     };
 
     /**
@@ -31830,7 +31831,7 @@ function ngViewFillContentFactory($compile, $controller, $route) {
      * debugging. See http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl
      *
      * For more information on precompiling templates see:
-     * http://lodash.com/custom-builds
+     * https://lodash.com/custom-builds
      *
      * For more information on Chrome extension sandboxes see:
      * http://developer.chrome.com/stable/extensions/sandboxingEval.html
@@ -32399,7 +32400,7 @@ function ngViewFillContentFactory($compile, $controller, $route) {
      * @memberOf _
      * @type string
      */
-    lodash.VERSION = '2.4.1';
+    lodash.VERSION = '2.4.2';
 
     // add "Chaining" functions to the wrapper
     lodash.prototype.chain = wrapperChain;
@@ -41885,7 +41886,7 @@ angular.module('percentage', [])
     }]);
 
 // ┌────────────────────────────────────────────────────────────────────┐ \\
-// │ Raphaël 2.1.3 - JavaScript Vector Library                          │ \\
+// │ Raphaël 2.1.4 - JavaScript Vector Library                          │ \\
 // ├────────────────────────────────────────────────────────────────────┤ \\
 // │ Copyright © 2008-2012 Dmitry Baranovskiy (http://raphaeljs.com)    │ \\
 // │ Copyright © 2008-2012 Sencha Labs (http://sencha.com)              │ \\
@@ -42737,7 +42738,7 @@ angular.module('percentage', [])
      = (number) angle in degrees.
     \*/
     R.deg = function (rad) {
-        return rad * 180 / PI % 360;
+        return Math.round ((rad * 180 / PI% 360)* 1000) / 1000;
     };
     /*\
      * Raphael.snapTo
@@ -47828,7 +47829,7 @@ angular.module('percentage', [])
             }
         }
         $(o, {
-            fill: "url(" + document.location + "#" + id + ")",
+            fill: "url('" + document.location + "#" + id + "')",
             opacity: 1,
             "fill-opacity": 1
         });
@@ -48308,7 +48309,7 @@ angular.module('percentage', [])
         } else {
             return node;
         }
-    }
+    },
     Element = function (node, svg) {
         var X = 0,
             Y = 0;
@@ -50011,7 +50012,7 @@ angular.module('percentage', [])
         this._viewBoxShift = {
             dx: -x,
             dy: -y,
-            scale: size
+            scale: paperSize
         };
         this.forEach(function (el) {
             el.transform("...");
