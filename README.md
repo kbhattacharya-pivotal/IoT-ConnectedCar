@@ -1,6 +1,5 @@
 # About this version
 This demo includes changes for demo running on PCF.
-for machine learing instruction, see https://github.com/pivotal/IoT-ConnectedCar/tree/master/IoT-DataScience
 
 ## installation steps:
 
@@ -17,6 +16,8 @@ for machine learing instruction, see https://github.com/pivotal/IoT-ConnectedCar
 
 there is a sample demo site(in korea): http://iot-dashboard.pcfdemo.net/
 It keeps running and 100 times faster than normal speed.
+
+for machine learing instruction, see https://github.com/pivotal/IoT-ConnectedCar/tree/master/IoT-DataScience
 
 any question to minseok kim at mkim@pivotal.io
 
