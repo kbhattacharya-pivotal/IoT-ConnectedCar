@@ -16,9 +16,14 @@
 package com.acmemotors;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
+ * To build:
+ * $ IoT-ConnectedCar>  ./gradlew build -p IoT-CarSimulator
+ *
  * To execute the simulator run the following command:
  * <code>
  * $ java -jar IoT-CarSimulator.jar inputFile=&lt;PATH_TO_INPUT&gt; delay=&lt;DELAY_IN_MILLISECONDS&gt;
@@ -27,9 +32,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author George Foster
  * @author Michael Minella
  */
-@SpringBootApplication
+@ComponentScan
+@EnableAutoConfiguration
 public class Main {
     public static void main(String[] args) throws Exception {
-		SpringApplication.run(Main.class, args);
+        ConfigurableApplicationContext c=SpringApplication.run(Main.class, args);
+        c.close();// to exit this process. in case when it is called from shell which runs forever loop.
     }
 }
