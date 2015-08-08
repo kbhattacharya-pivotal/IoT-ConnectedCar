@@ -1,8 +1,9 @@
-# about this version
+# About this version
 This demo includes changes for demo running on PCF.
 for machine learing instruction, see https://github.com/pivotal/IoT-ConnectedCar/tree/master/IoT-DataScience
 
-installation steps:
+## installation steps:
+
 1. prepare single VM on IaaS
    ```
    spring-xd
