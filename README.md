@@ -3,14 +3,16 @@ This demo includes changes for demo running on PCF.
 for machine learing instruction, see https://github.com/pivotal/IoT-ConnectedCar/tree/master/IoT-DataScience
 
 installation steps:
-1) prepare single VM on IaaS
+1. prepare single VM on IaaS
+   ```
    spring-xd
    spring-xd gemfire-server
    IoT-GemfireREST app
    IoT-CarSimulator app
+   ```
    instruction :IoT-ConnectedCar demo(https://github.com/myminseok/IoT-ConnectedCar)
-2) push IoT-Dashboard app to iot-gem-proy app(https://github.com/myminseok/webproxy).
-3) push IoT-Dashboard app to PCF.
+2. push IoT-Dashboard app to iot-gem-proy app(https://github.com/myminseok/webproxy).
+3. push IoT-Dashboard app to PCF.
 
 there is a sample demo site(in korea): http://iot-dashboard.pcfdemo.net/
 It keeps running and 100 times faster than normal speed.
